@@ -1,0 +1,33 @@
+#wrapper{
+    margin-left: 200px;
+    background: darkkhaki;
+    min-height: 500px;
+    width: 900px;
+}
+h3{
+    color: blue;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: burlywood;
+}
+form{
+    border: coral;
+    margin-left: 300px;
+    width: 300px;
+    padding: 20px 50px ;
+    background: bisque ;
+}
+button{
+    padding: 10px;
+    border: 1px solid burlywood;
+    border-radius: 3px;
+    margin-left: 50px;
+}
+textarea{
+    border: bisque 1px solid;
+    border-radius: 3px;
+}

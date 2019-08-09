@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div style="margin-left: 350px; border: 1px solid black; margin-right: 300px;padding: 10px 100px;" >
+    <h3><p>NoteType</p></h3>
+    <th:block th:if=" ${message}">
+        <p th:text="${message}" style="color: crimson"></p>
+    </th:block>
+    <form th:action="@{/create-Notetype}" th:object="${noteType}" method="post">
+        <table style="align-content: center">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" th:field="*{name}"></td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td><textarea cols="35" rows="12" th:field="*{description}"></textarea></td>
+            </tr>
+            <tr>
+                <td><a th:href="@{/show-notetype}">back list</a></td>
+                <td><input type="submit" value="Luu" style="padding: 5px 40px;
+    margin-left: 140px;"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+package com.codegym.service;
+
+import com.codegym.model.Note;
+import com.codegym.model.NoteType;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+public interface NoteService {
+    Page<Note> showAll(Pageable pageable);
+
+    Note findById(Long id);
+
+    void save(Note note);
+
+    void remove(Long id);
+
+    Iterable<Note> findAllByNoteType(NoteType noteType);
+}

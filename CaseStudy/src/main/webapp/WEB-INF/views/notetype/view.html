@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="margin-left: 500px">
+
+    <h2>View NoteType</h2>
+    <a th:href="@{/show-notetype}">Show Notetype list</a>
+    <h3><p th:text="${notetype.name}"></p></h3>
+    <table cellpadding="1" cellspacing="1" border="1px" style="text-align: center">
+        <tr>
+            <td>Stt</td>
+            <td>Tieu de</td>
+            <td>Noi dung</td>
+        </tr>
+        <tr th:each="n: ${note}">
+            <td th:text="${n.id}"></td>
+            <td th:text="${n.title}"></td>
+            <td th:text="${n.content}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
